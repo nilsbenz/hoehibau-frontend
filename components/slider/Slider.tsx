@@ -13,12 +13,19 @@ const Slider: React.FC<Props & React.HTMLAttributes<any>> = ({
   images,
   ...props
 }) => {
+  if (!images.length) {
+    return null;
+  }
+
   return (
     <div {...props}>
       <AwesomeSlider
         animation="scaleOutAnimation"
         className={classes.slider}
         media={images.map((image) => ({ source: getStrapiMedia(image) }))}
+        bullets={images.length > 1}
+        organicArrows={images.length > 1}
+        mobileTouch={images.length > 1}
       />
     </div>
   );
