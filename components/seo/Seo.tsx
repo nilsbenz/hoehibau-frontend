@@ -1,7 +1,6 @@
 import { getStrapiMedia } from '@lib/media';
 import { SeoProps } from '@ts/app-types';
 import { GlobalProps } from '@ts/strapi-types';
-import { NextPage } from 'next';
 import Head from 'next/head';
 import { useContext } from 'react';
 import { GlobalContext } from '../../pages/_app';
@@ -10,7 +9,7 @@ interface Props {
   seo?: SeoProps;
 }
 
-const Seo: NextPage<Props> = ({ seo }) => {
+const Seo: React.FC<Props> = ({ seo }) => {
   const { defaultSeo, siteName } = useContext(GlobalContext) as GlobalProps;
 
   const seoWithDefaults = {

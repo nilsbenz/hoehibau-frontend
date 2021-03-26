@@ -1,6 +1,5 @@
 import { getStrapiMedia } from '@lib/media';
 import { StrapiMedia } from '@ts/strapi-types';
-import { NextPage } from 'next';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -10,7 +9,7 @@ interface Props {
   maxHeight?: number;
 }
 
-const StrapiImage: NextPage<Props & React.HTMLAttributes<any>> = ({
+const StrapiImage: React.FC<Props & React.HTMLAttributes<any>> = ({
   image,
   maxWidth,
   maxHeight,
