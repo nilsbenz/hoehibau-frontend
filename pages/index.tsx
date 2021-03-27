@@ -7,7 +7,6 @@ import { fetchAPI } from '@lib/api';
 import classes from '@styles/index.module.scss';
 import { AktuellesProjekt } from '@ts/strapi-types';
 import { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
@@ -49,9 +48,9 @@ const Home: NextPage<Props> = ({ aktuelleProjekte }) => {
     <>
       <Seo seo={{ metaTitle: 'Startseite' }} />
       <div className={classes.landing}>
-        <Image
-          src="/wood.jpg"
-          layout="fill"
+        <img
+          src="https://res.cloudinary.com/djnp3wfie/image/upload/v1616864234/wood_w99bq2.jpg"
+          alt=""
           className={classes['landing-image']}
         />
         <div className={classes['landing-content']}>
